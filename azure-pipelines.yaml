@@ -49,3 +49,5 @@ stages:
                 mv /home/udacityadmin/azagent/_work/1/drop-azurevote/$(Build.BuildId)-azurevote.zip app
                 cd app
                 unzip -o $(Build.BuildId)-azurevote.zip
+                pip3 install -r requirements.txt
+                python3 main.py
