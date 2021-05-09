@@ -24,10 +24,16 @@
 
 
 
+![image-20210509035155690](screenshots/instance-insights-1.png)
+
+![image-20210509035251740](screenshots/instance-insights-2.png)
+
+![image-20210509035337389](screenshots/instance-insights-3.png)
+
 2. Import and reference the correct libraries to enable the collection of Application Insights telemetry data.
    * Application Insight Events that show the results of clicking vote for each Dogs & Cats
 
-![image-20210507202258338](screenshots/app-insights-events.png)
+![15](screenshots/app-insights-events.png)
 
 ![image-20210507203557346](screenshots/transaction-search.png)
 
@@ -61,7 +67,7 @@ chart-cpu-utilization-1
 
 ![image-20210507223308099](screenshots/scale-email.png)
 
-
+![Rounded Rectangle](screenshots/vmss-activity-log.png)
 
 ## Kubernetes cluster:
 
@@ -73,9 +79,11 @@ chart-cpu-utilization-1
 
 ![image-20210508002112007](screenshots/kubernetes-alert.png)
 
-![image-20210508003419602](screenshots/pod-count-alert.png)
+![](screenshots/pod-count-alert.png)
 
+![image-20210509041056440](screenshots/kubectl-replicas.png)
 
+![image-20210509041152421](screenshots/kubectl-replicas-2.png)
 
 ## Runbooks:
 
@@ -86,3 +94,8 @@ chart-cpu-utilization-1
 ![image-20210508015406445](screenshots/runbook-triggered.png)
 
 ![image-20210508022022436](screenshots/runbooks-jobs.png)
+
+![runbook-resource-group](screenshots/runbook-resource-group.png)
+
+![image-20210508231209347](screenshots/run-book-email-alert.png)
+

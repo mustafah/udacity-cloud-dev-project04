@@ -28,19 +28,19 @@ from opencensus.ext.flask.flask_middleware import FlaskMiddleware
 
 logger = logging.getLogger(__name__)
 logger.addHandler(AzureLogHandler(
-    connection_string='InstrumentationKey=4a00840c-956f-4fcd-a931-8d4e14ee33fa')
+    connection_string='InstrumentationKey=04e47240-3382-4a7f-9ba9-6f2a4b3c80fb')
 )
 logger.setLevel(logging.INFO)
 
 # Metrics
 exporter = metrics_exporter.new_metrics_exporter(
   enable_standard_metrics=True,
-  connection_string='InstrumentationKey=4a00840c-956f-4fcd-a931-8d4e14ee33fa')
+  connection_string='InstrumentationKey=04e47240-3382-4a7f-9ba9-6f2a4b3c80fb')
 
 # Tracing
 tracer = Tracer(
     exporter=AzureExporter(
-        connection_string='InstrumentationKey=4a00840c-956f-4fcd-a931-8d4e14ee33fa'),
+        connection_string='InstrumentationKey=04e47240-3382-4a7f-9ba9-6f2a4b3c80fb'),
     sampler=ProbabilitySampler(1.0),
 )
 
@@ -50,7 +50,7 @@ app = Flask(__name__)
 #middleware = # TODO: Setup flask middleware
 middleware = FlaskMiddleware(
     app,
-    exporter=AzureExporter(connection_string="InstrumentationKey=4a00840c-956f-4fcd-a931-8d4e14ee33fa"),
+    exporter=AzureExporter(connection_string="InstrumentationKey=04e47240-3382-4a7f-9ba9-6f2a4b3c80fb"),
     sampler=ProbabilitySampler(1.0)
 )
 
@@ -135,6 +135,6 @@ def index():
 
 if __name__ == "__main__":
     # comment line below when deploying to VMSS
-    # app.run() # local
+    app.run() # local
     # uncomment the line below before deployment to VMSS
-    app.run(host='0.0.0.0', threaded=True, debug=True) # remote
+    # app.run(host='0.0.0.0', threaded=True, debug=True) # remote
